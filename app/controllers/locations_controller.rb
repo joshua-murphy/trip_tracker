@@ -16,13 +16,14 @@ class LocationsController < ApplicationController
 
   def create
     @location = @trip.location.new(location_params)
+    @location.save ? (redirect_to trip_locations_path(@trip)) : (redner :new)
   end
 
   def edit
   end
 
   def update
-    @location.update(location_params) ? (redirect_to trip_location_path(@trip, @location)) : render :edit
+    @location.update(location_params) ? (redirect_to trip_location_path(@trip, @location)) : (render :edit)
   end
 
   def destroy
@@ -41,7 +42,7 @@ class LocationsController < ApplicationController
     end
 
     def set_trip
-      @trip = Trip.find(params[:id])
+      @trip = Trip.find(params[:trip_id])
     end
 
 
