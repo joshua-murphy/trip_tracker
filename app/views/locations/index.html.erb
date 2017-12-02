@@ -1,7 +1,10 @@
-<h1>All locations for <strong><%= @trip.name %></stron></h1>
+<%= link_to 'Back', trip_path(@trip)%>
+<!-- <%= link_to 'Add Location', new_trip_location_path(@trip)%> -->
+
+<h1>All locations for <strong><%= @trip.name %></strong></h1>
 
 <% @locations.each do |loc| %>
   <%= link_to trip_location_path(@trip, loc) %>
 <% end %>
 
-<!-- Home -->
+<!-- Need Create / Add, commented it out all versions were cuasing errors-->
