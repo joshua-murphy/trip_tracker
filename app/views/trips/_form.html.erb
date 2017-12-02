@@ -1,0 +1,9 @@
+<%= form_for @trip do |f| %>
+  <%= f.label :name, "Trip Name" %>
+  <%= f.text_field :name, required: true, autofocus: true %>
+  <br><br>
+  <%= f.label "Trip Length" %>
+  <%= f.text_field :length, required: true %>
+  <br>
+  <%= f.submit "Save" %>
+<% end %>
