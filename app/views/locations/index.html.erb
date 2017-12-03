@@ -1,10 +1,18 @@
 <%= link_to 'Back', trip_path(@trip)%>
 <%= link_to 'Add Location', new_trip_location_path%>
 
-<h1>All locations for <strong><%= @trip.name %></strong></h1>
+<% if @locations.any? %>
 
-<% @locations.each do |loc| %>
-  <%= link_to loc.name, trip_location_path(@trip, loc) %>
+  <h1>All locations for <strong><%= @trip.name %>:</strong></h1>
+
+  <% @locations.each do |loc| %>
+    <%= link_to loc.name, trip_location_path(@trip, loc) %>
+  <% end %>
+
+<% else %>
+
+  <h2>No saved locations, <%= link_to "Create one?", new_trip_location_path(@trip) %></h2>
+
 <% end %>
 
 <!-- Need Create / Add, commented it out all versions were cuasing errors-->

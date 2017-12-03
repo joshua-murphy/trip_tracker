@@ -1,8 +1,15 @@
+<%= link_to 'Back', trip_path(@trip)%>
+<%= link_to 'Edit', edit_trip_location_path(@trip, @location)%>
+<%= link_to 'Delete', trip_location_path(@trip, @location), method: :delete, 
+  data: { confirm: "Are you sure" } %>
+
 <h1><%= @location.name %></h1>
 
 <% if @location.address %>
-<%= link_to "Address", location_address_path(@location, @location.address) %>
+  <%= @location.address.street_address %> <%= @location.address.city %>,
+  <%= @location.address.state %> <%= @location.address.zip %> <br>
+  <%= link_to "View Address", location_address_path(@location, @location.address) %>
 <% else %>
-<%= link_to "Add address", new_location_address_path(@location) %>
+  <%= link_to "Add address", new_location_address_path(@location) %>
 <% end %>
 <!-- Edit, Delete -->
