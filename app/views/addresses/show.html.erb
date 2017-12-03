@@ -1,2 +1,9 @@
-<h1>Addresses#show</h1>
-<p>Find me in app/views/addresses/show.html.erb</p>
+<h1>Address for <%= @location.name %>:</h1>
+
+<%= @address.street_address %>
+<%= @address.city %>,
+<%= @address.state %> 
+<%= @address.zip %>
+<br><br>
+<%= link_to "Back", trip_location_path(@location.trip_id, @location) %>
+<%= link_to "Edit", edit_location_address_path(@location, @address) %>

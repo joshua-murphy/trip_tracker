@@ -1,4 +1,8 @@
 <h1><%= @location.name %></h1>
-<p>Find me in app/views/locations/show.html.erb</p>
 
+<% if @location.address %>
+<%= link_to "Address", location_address_path(@location, @location.address) %>
+<% else %>
+<%= link_to "Add address", new_location_address_path(@location) %>
+<% end %>
 <!-- Edit, Delete -->
