@@ -1,7 +1,7 @@
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
- *
+
  * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
  * vendor/assets/stylesheets directory can be referenced here using a relative path.
  *
@@ -13,6 +13,14 @@
  *= require_tree .
  *= require_self
  */
-
 @import 'semantic-ui';
 @import "semantic-ui/collections/menu";
+
+body{
+  background-color: #EFF8FC;
+}
+// height: 100%;
+// width: 100%  background-size: cover; background-attachment: fixed
+// background-image: url('travel-6.jpg');
+// background-position: center;
+// background-color: # E3F4FC;

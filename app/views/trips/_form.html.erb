@@ -1,17 +1,18 @@
 <div class='ui form'>
 <div class='ui grid'>
 <%= form_for @trip do |f| %>
-  <%= f.label :name, "Trip Name" %>
-  <%= f.text_field :name, required: true, autofocus: true %>
-  <br><br>
-  <%= f.label "Trip Length (miles)" %>
-  <%= f.text_field :length, required: true %>
-  <br>
-  </div>
-  </div>
-  <br>
+ <%= f.label :name, "Trip Name" %>
+ <%= f.text_field :name, required: true, autofocus: true %>
+ <br><br>
+ <%= f.label "Trip Length (miles)" %>
+ <%= f.text_field :length, required: true %>
+ <%= f.submit "Save", :class => 'ui basic violet button' %>
+ <%= link_to 'Cancel', trips_path, :class=>"ui basic violet button" %>
+ <br>
+ </div>
+ </div>
+ <br>
 
-  <%=f.submit "Save", :class => 'ui basic violet button' %>  <%= link_to 'Cancel', trips_path, {:class=>"ui basic violet button"} %>
 
 
 <% end %>
