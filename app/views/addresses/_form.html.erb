@@ -1,5 +1,5 @@
-<div class='ui form'>
 <div class='ui grid'>
+<div class='ui violet form'>
 <%= form_for [@location, @address] do |f| %>
   <%= f.label :street_address, "Street Address" %>
   <%= f.text_field :street_address, required: true, autofocus: true %>
@@ -13,7 +13,7 @@
   <%= f.label :zip %>
   <%= f.text_field :zip, required: true %>
   <br><br>
-  <%= f.submit "Save", :class => 'ui basic blue button' %> <%= link_to 'Cancel', trip_location_path(@location.trip_id, @location), :class => 'ui basic blue button' %>
+  <%= f.submit "Save", :class=>'ui basic violet button' %> <%= link_to 'Cancel', trip_location_path(@location.trip_id, @location), :class => 'ui basic violet button' %>
   </div>
   </div>
 <% end %>

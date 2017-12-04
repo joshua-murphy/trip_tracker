@@ -7,5 +7,5 @@
 <% if @trip.locations.any? %>
   <h3><%= link_to "All locations", trip_locations_path(@trip) %> for this trip:</h3>
 <% else %>
-  <h3><%= link_to "Add a location for this trip", new_trip_location_path(@trip) %></h3>
+  <h3><%= link_to "Add a location for this trip", new_trip_location_path(@trip), :class=>'ui basic violet button' %></h3>
 <% end %>

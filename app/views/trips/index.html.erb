@@ -1,8 +1,12 @@
-<h1>All Trips:</h1>
+<div class='ui sizer vertical segment'>
+<h1 class='ui center aligned huge header'>All Trips:</h1>
+</div>
 
 <% if @trips.any? %>
 <% @trips.each do |trp| %>
-  <h3><%= link_to trp.name, trip_path(trp) %></h3>
+<div class='ui link list'>
+  <h3 class='ui center aligned huger header'><%= link_to trp.name, trip_path(trp) %></h3>
+</div>  
   <% end %>
 <% else %>
   <h2>No trips saved, <%= link_to "create one", new_trip_path %>?</h2>

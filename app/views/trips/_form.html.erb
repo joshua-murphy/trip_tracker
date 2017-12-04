@@ -1,5 +1,5 @@
-<div class='ui grid'> 
 <div class='ui form'>
+<div class='ui grid'> 
 <%= form_for @trip do |f| %>
   <%= f.label :name, "Trip Name" %>
   <%= f.text_field :name, required: true, autofocus: true %>
@@ -11,7 +11,7 @@
   </div>
   <br>
  
-  <%=f.submit "Save", :class => 'ui basic blue button' %>  <%= link_to 'Cancel', trips_path, {:class=>"ui basic blue button"} %>
+  <%=f.submit "Save", :class => 'ui basic violet button' %>  <%= link_to 'Cancel', trips_path, {:class=>"ui basic violet button"} %>
  
   
 <% end %>
