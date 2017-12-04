@@ -1,3 +1,5 @@
+<div class='ui grid'> 
+<div class='ui form'>
 <%= form_for @trip do |f| %>
   <%= f.label :name, "Trip Name" %>
   <%= f.text_field :name, required: true, autofocus: true %>
@@ -5,7 +7,13 @@
   <%= f.label "Trip Length (miles)" %>
   <%= f.text_field :length, required: true %>
   <br>
-  <%= f.submit "Save" %>
+  </div>
+  </div>
+  <br>
+ 
+  <%=f.submit "Save", :class => 'ui basic blue button' %>  <%= link_to 'Cancel', trips_path, {:class=>"ui basic blue button"} %>
+ 
+  
 <% end %>
 
 <!-- added cancel added on edit.html cuz not part of form -->

@@ -5,5 +5,5 @@
   <h3><%= link_to trp.name, trip_path(trp) %></h3>
   <% end %>
 <% else %>
-  <h2>No trips saved, <%= link_to "create one?", new_trip_path %></h2>
+  <h2>No trips saved, <%= link_to "create one", new_trip_path %>?</h2>
 <% end %>
