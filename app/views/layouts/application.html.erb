@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<div class="ui container">
   <head>
     <title>Trip Planner</title>
     <%= csrf_meta_tags %>
@@ -10,7 +11,7 @@
   </head>
 
   <nav>
-    <%= link_to 'All Trips', trips_path %> | 
+    <%= link_to 'All Trips', trips_path %> |
     <%= link_to 'New Trip', new_trip_path %>
   </nav>
   <hr />
@@ -18,4 +19,5 @@
   <body>
     <%= yield %>
   </body>
+</div>
 </html>
