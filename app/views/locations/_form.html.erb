@@ -2,5 +2,6 @@
   <%= f.label :name, "Location Name" %>
   <%= f.text_field :name, required: true, autofocus: true %>
   <br><br>
-  <%= f.submit "Save" %>
+  <%= f.submit "Save", :class => 'ui basic violet button' %>
+  <%= link_to 'Cancel', trip_locations_path(@trip), :class => 'ui basic violet button' %>
 <% end %>
