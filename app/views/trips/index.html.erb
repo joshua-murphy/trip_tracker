@@ -2,6 +2,7 @@
 <h1 class='ui violet center aligned huge header'>All Trips:</h1>
 </div>
 
+<div>
 <% if @trips.any? %>
 <% @trips.each do |trp| %>
 <div class='ui link list'>
@@ -9,5 +10,7 @@
 </div>
   <% end %>
 <% else %>
+
   <h2>No trips saved, <%= link_to "create one", new_trip_path %>?</h2>
 <% end %>
+</div>

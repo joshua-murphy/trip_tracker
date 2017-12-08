@@ -12,8 +12,8 @@
 /tmp/*
 !/log/.keep
 !/tmp/.keep
-
+/app/views/trips/ignore-index.html.erb
 /node_modules
 /yarn-error.log
-
+ignore.
 .byebug_history
